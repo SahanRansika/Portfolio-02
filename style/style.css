@@ -655,15 +655,16 @@ section {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: .8rem;
+    padding: 2rem 100%;
     border: .2rem solid var(--main-color);
     background: var(--main-color);
+    color: black;
     border-radius: 50%;
     z-index: 1;
     overflow: hidden;
 }
 
-.footer-iconTop a i{
+.footer-iconTop a i {
     font-size: 2.4rem;
     color: var(--bg-color);
     transition: .5s;
@@ -685,16 +686,161 @@ section {
     height: 100%;
 }
 
-.footer-iconTop a:hover i {
+.footer-iconTop a:hover {
+    background: transparent;
     color: var(--main-color);
     transition: .5s;
 }
 
 /*design @media query section*/
-@media all and (max-width: 600px){
-    .home.home-image {
+@media (max-width: 1200px){
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 4%;
+    }
+    section {
+        padding: 10rem 4% 2rem;
+    }
+    .home {
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        background: var(--second-bg-color);
+    }
+    .logo {
+        font-size: 40px;
+    }
+    #menu-icon {
+        font-size: 3.6rem;
+        cursor: pointer;
+        display: block;
+    }
+    #menu-icon{
         position: absolute;
-        left: 80px;
-        top: 0;
+        right: 50px;
+    }
+    header>nav>a {
+        display: none;
+    }
+    .home-image img {
+        width: 300px;
+    }
+    .home-image {
+        position: absolute;
+        left: 120px;
+        top: 10px;
+    }
+    .home h1 {
+        font-size: 35px;
+    }
+    .home-content {
+        position: absolute;
+        left: 100px;
+        top: 520px;
+        max-width: 500px;
+    }
+    .home-sci {
+        position: absolute;
+        left: 120px;
+        top: 850px;
+    }
+    .home-imageHover {
+        display: none;
+    }
+  .about-content p {
+      max-width: 400px;
+  }
+}
+
+@media (max-width: 300px) {
+    .header {
+        background: var(--second-bg-color);
+    }
+    .logo {
+        font-size: 20px;
+    }
+    #menu-icon {
+        font-size: 3.6rem;
+        cursor: pointer;
+        display: block;
+    }
+    #menu-icon{
+        position: absolute;
+        right: 20px;
+    }
+    header>nav>a {
+        display: none;
+    }
+    .home-image img {
+        width: 200px;
+    }
+    .home-image {
+        position: absolute;
+        left: 50px;
+        top: 50px;
+    }
+    .home h1 {
+        font-size: 22px;
+    }
+    .home-content {
+        position: absolute;
+        left: 10px;
+        top: 400px;
+        max-width: 280px;
+    }
+    .home-content p {
+        font-size: 10px;
+        max-width: 300px;
+    }
+    .home-sci {
+        position: absolute;
+        left: 20px;
+        top: 620px;
+    }
+    .btn-box {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 20rem;
+        height: 3rem;
+        top: -25px;
+    }
+    .heading {
+        font-size: 25px;
+    }
+    .btn-box .btn {
+        font-size: 10px;
+        margin: 5px;
+    }
+    .home-imageHover {
+        display: none;
+    }
+  .about-content p {
+      max-width: 250px;
+      font-size: 10px;
+  }
+    .about-content h3 {
+        font-size: 20px;
+    }
+    .footer-iconTop a {
+        padding: 1.1rem;
+    }
+    .footer-text p {
+        font-size: 1rem;
+    }
+    .home-sci {
+        position: absolute;
+        bottom: 4rem;
+        max-width: 170px;
+        display: flex;
+        justify-content: space-between;
     }
 }
